@@ -1,0 +1,17 @@
+[
+    {
+        "title": "In defense of Bootstrap",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "user_name": "Sal"
+    },
+    {
+        "title": "MVC or die",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "user_name": "Lernantino"
+    },
+    {
+        "title": "I hate CSS",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "user_name": "Amiko"
+    }
+]
