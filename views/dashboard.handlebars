@@ -1,0 +1,33 @@
+{{!-- Create post button --}}
+<button type="button" id= "postCreateBtn" class="btn btn-primary" data-toggle="modal" data-target="#postCreateModal">
+  Create a post
+</button>
+
+{{!-- Create post form --}}
+<form class="form postCreate-form hide">
+  <div class="form-group">
+    <label for="title-postCreate">Title:</label>
+    <input class="form-input" type="text" id="title-postCreate" />
+  </div>
+  <div class="form-group">
+    <label for="content-postCreate">Content:</label>
+    <input class="form-input" type="text" id="content-postCreate" />
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" id="postPublishBtn" type="submit">Publish</button>
+  </div>
+</form>
+
+<!-- Loop over each post object -->
+{{#each posts as |post| }}
+<div class="row align-center mb-5">
+  <div class="card col-md-6">
+    <!-- Render post-specific data with Handlebars.js expressions -->
+    <h2>{{post.title}}</h2>
+    <h2>{{post.user_id}}</h2>
+    <h2>{{post.content}}</h2>
+  </div>
+</div>
+{{/each}}
+
+<script src="/js/dashboard.js"></script>

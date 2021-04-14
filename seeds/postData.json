@@ -2,16 +2,16 @@
     {
         "title": "In defense of Bootstrap",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "user_name": "Sal"
+        "user_id": 1
     },
     {
         "title": "MVC or die",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "user_name": "Lernantino"
+        "user_id": 2
     },
     {
         "title": "I hate CSS",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "user_name": "Amiko"
+        "user_id": 3
     }
 ]

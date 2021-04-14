@@ -49,4 +49,28 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+// DASHBOARD
+router.get('/dashboard', withAuth, async (req, res) => {
+  try {
+    // Get all posts by user, sorted by title
+    const postData = await Post.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+      order: [['title', 'ASC']],
+    });
+
+    // Serialize post data so templates can read it
+    const posts = postData.map((project) => project.get({ plain: true }));
+
+    // Pass serialized data into Handlebars.js template
+    res.render('dashboard', {
+      posts,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
